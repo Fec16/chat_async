@@ -32,3 +32,16 @@ When the client and server share the same port (8080). The application will run 
 However if we only change one port, let's say the server port becomes 8080 while the client port remains 2000. An error then will occur on the client side because according to the client, the port doesn't have a connection and the program will crash when run, as shown in the image. <br>
 
 **2.3. Small Changes**
+
+![Server 2](assets/images/server2.jpg) 
+![Client 5](assets/images/client5.jpg) 
+![Client 6](assets/images/client6.jpg) 
+
+
+The outcome in the image above is achieved by modifying the code in `bin/server.rs` and `bin/client.rs` as following: <br>
+
+![Server Code](assets/images/server_code.jpg) 
+![Client Code](assets/images/client_code.jpg) 
+
+
+The changes were made so that when `bcast.tx` (sender) sends a message to each client, it includes the sender's address through the addr variable. <br>
